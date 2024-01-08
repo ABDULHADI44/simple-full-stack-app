@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* CSS styles for the sign-up form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            background-image: url('https://img.freepik.com/free-photo/blossom-floral-bouquet-decoration-colorful-beautiful-flowers-background-garden-flowers-plant-pattern-wallpapers-greeting-cards-postcards-design-wedding-invites_90220-1103.jpg')
+            background-repeat: no-repeat;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    {% include 'index.html' %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Create a username" required>
+        <br>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Full Name" required>
+        <br>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+        <br>
+        <label for="pass1">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Password" required>
+        <br>
+        <label for="pass2">Confirm Password</label>
+        <input type="password" id="pass2" name="pass2" placeholder="Confirm Password" required>
+        <br>
+
+        <button type="submit">Submit</button>
+
+        <a href="/signin"> Already have an account </a>
+    </form>
+
+    <script src="" async defer></script>
+</body>
+</html>
